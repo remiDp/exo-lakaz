@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<!--Changer la langue en fonction de la maquette-->
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Description: résumé contenu principal du site,important pour le référencement-->
+    <meta name="description" content="Intégration Maquette" />
+    <!--Title : à modifier, il reprend le nom de la page et titre du site-->
+    <title>La Kaz du 974</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!--A créer si j'ai le temps -->
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+    <!-- Code ci-dessous comptabilité vieux navigateur-->
+    <!--[if lt IE 9]>
+    <script
+src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js">
+</script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <header id="entete">
+
+        <!--Bandeau Vert-->
+        <div class="bandeauentete">
+            <div class="conteneur flex menu1">
+                <nav class="menusite">
+                    <ul class="flex">
+                        <li><a href="index.html">le concept</a></li>
+                        <li><a href="#">la carte</a></li>
+                        <li><a href="emplacement.html">où sommes-nous ?</a></li>
+                        <li><a class="droite" href="contact.html">contact</a></li>
+                    </ul>
+                </nav>
+                <div class="boutons">
+                    <ul class="flex">
+                        <li><a class="bouton1" href="#">06 75 98 27 88</a></li>
+                        <li><a class="bouton2" href="#">lakazdu974@gmail.com</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!--navigation mobile -->
+        <nav id="menu-mobile">
+            <span class="btn">
+                <i class="fas fa-bars"></i>
+            </span>
+            <ul>
+                <li><a href="#">le concept</a></li>
+                <li><a href="#">la carte</a></li>
+                <li><a href="#">où sommes-nous ?</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+
+        <!--Photo Bandeau Tropical & Combi -->
+
+        <div class="combi conteneur">
+            <img src="img/entete-combi.jpg" alt="Combi Bleu, La Kaz du 974, Foodtruck, Toulouse">
+        </div>
+
+    </header>
+    
+    
+    
+    
+    
+    <!-- Début conteneur principal-->
+    <main class="principal conteneur flex">
+        <!-- Liste des articles-->
+        <article id="page" class="inter">
+            <h1>CONTACT</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti necessitatibus, sit similique maxime labore iusto magnam voluptatibus iure.</p>
+           
+            <!-- Début formulaire-->
+            <div class="formulaire">
+                <form action="php/insertion_agent.php" method="post">
+                    <!--section 1-->
+                    <p>
+                        <!--Liste déroulante-->
+                        <label for="civilite">Objet :</label>
+                        <select id="civilite">
+                            <option value="info" selected="selected">Privatisation</option>
+                            <option value="devis">Service Traiteur</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <!--Texte (une ligne simle)-->
+                        <label for="nom_agent">Votre nom :</label>
+                        <input type="text" name="nom_agent" id="nom_agent" placeholder="Nom" required="required" />
+                    </p>
+
+                    <p>
+                        <!--Email (obligatoire)-->
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" placeholder="Email" required />
+                    </p>
+
+                    <p>
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" placeholder="Message"></textarea>
+                    </p>
+
+                    <!--Fin section 2-->
+
+                    <input class="coucou" type="submit" value="ENVOYER" />
+                </form>
+            </div>
+            <!--Fin formulaire-->
+
+        </article>
+        <!-- Fin liste des articles -->
+
+        <!-- Début colonne-->
+        <aside id="colonne">
+            <div class="widget">
+                <h3>INFORMATION</h3>
+                <p>
+                    <strong><i class="fas fa-user"></i> Laure DUFFET</strong>
+                </p>
+                <address>
+                    <i class=" fas fa-mobile-alt"></i> 06 75 98 27 88<br />
+                    <br />
+<i class="far fa-envelope"></i> <a href="mailto:mail@contact.fr">lakazdu974@gmail.com</a>
+                </address>
+
+            </div>
+
+        </aside>
+
+<!--
+            <div class="widget">
+                <h3>Localisation</h3>
+
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23149.6973900583!2d1.4893534123507166!3d43.50833961408067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebe4a86703b29%3A0x481e64a2ed6bc047!2s31320+Castanet-Tolosan!5e0!3m2!1sfr!2sfr!4v1551310331844" width="500" height="260" frameborder="0" style="border:0" allowfullscreen></iframe>
+-->
+                
+            
+
+
+       
+       
+        <!-- Fin colonne-->
+    </main>
+    
+  
+    <footer id="pieddepage">
+
+        <div class="social">
+            <ul class="flex">
+                <li><a href="#" title="lien page Facebook" target="_blank"><img class="facebook" src="img/facebook.png" alt="logo Facebook"></a></li>
+                <li><a href="#" title="lien page Twitter" target="_blank"><img class="twitter" src="img/twitter.png" alt="logo Twitter"></a></li>
+                <li><a href="#" title="lien page Instagram" target="_blank"><img class="instagram" src="img/instagram.png" alt="logo intagram"></a></li>
+            </ul>
+
+            <small>Copyright © 2019 Mathilde PERREU</small>
+
+        </div>
+
+        <a href="#top" title="haut de page" class="fleche js-scrollTo"> <i class="fa-lg fas fa-chevron-up"></i></a>
+
+    </footer>
+
+
+
+
+    <!-- DEBUT JAVASCRIPT -->
+
+    <!--   Inclusion bibliothèque jQuery -->
+    <script src="js/jquery-1.12.4.min.js"> </script>
+
+
+    <!-- Bibliotheque jQuery UI -->
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
+    <!--       Inclusion du script personnel -->
+    <script src="js/blog_script.js"> </script>
+
+    <!-- Liez le javascript externe permettant à Fancybox de fonctionner -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js">
+    </script>
+
+    <!-- Inclusion du script OwlCarousel -->
+    <script src="js/owl.carousel.min.js"> </script>
+
+
+    <!-- Options fancybox -->
+    <script type="text/javascript">
+        $(function() {
+            $('[data-fancybox]').fancybox({
+                loop: true
+            });
+
+            $('.owl-carousel').owlCarousel({
+                slideBy: 1, // defilement 1 par 1
+                autoplay: true, // defilement automatique
+                autoplayTimeout: 3000, // au bout de 10s
+                autoplayHoverPause: true, // stoppe défilement au survol
+                loop: true, // boucle
+                navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"], // apparence des fleches
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: true,
+                        margin: 0,
+                        dots: true
+                    },
+                    500: {
+                        items: 3,
+                        margin: 10,
+                        nav: true,
+                        dots: true
+                    },
+                    900: {
+                        items: 4,
+                        dots: true,
+                        nav: true,
+                        margin: 20
+                    }
+                }
+            });
+
+
+
+        });
+
+    </script>
+
+    <!--   acordion -->
+    <script type="text/javascript">
+        $(function() {
+            $(".accordion").accordion({
+                collapsible: true, // se ferme au clic sur l'onglet
+                active: false, // tous les onglets fermés par défaut
+                animate: {
+                    easing: "easeOutBounce",
+                    duration: 2000
+                }, // animation à l'ouverture/fermeture
+                heightStyle: "content" // les div s'adaptent au contenu
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<!--Changer la langue en fonction de la maquette-->
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Description: résumé contenu principal du site,important pour le référencement-->
+    <meta name="description" content="Intégration Maquette" />
+    <!--Title : à modifier, il reprend le nom de la page et titre du site-->
+    <title>La Kaz du 974</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!--A créer si j'ai le temps -->
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"
+        integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous">
+    </script>
+
+    <!-- Code ci-dessous comptabilité vieux navigateur-->
+    <!--[if lt IE 9]>
+    <script
+src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js">
+</script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <header id="entete">
+
+        <!--Bandeau Vert-->
+        <div class="bandeauentete">
+            <div class="conteneur flex menu1">
+                <nav class="menusite">
+                    <ul>
+                        <li><a href="index.html">le concept</a></li>
+                        <li><a href="lacarte.html">la carte</a></li>
+                        <li><a href="emplacement.html">où sommes-nous ?</a></li>
+                        <li><a class="droite" href="contact.html">contact</a></li>
+                    </ul>
+                </nav>
+                <div class="boutons">
+                    <ul class="flex">
+                        <li><a class="bouton1" href="#">06 75 98 27 88</a></li>
+                        <li><a class="bouton2" href="#">lakazdu974@gmail.com</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!--navigation mobile -->
+        <nav id="menu-mobile">
+            <span class="btn">
+                <i class="fas fa-bars"></i>
+            </span>
+            <ul>
+                <li><a href="#">le concept</a></li>
+                <li><a href="#">la carte</a></li>
+                <li><a href="#">où sommes-nous ?</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+
+        <!--Photo Bandeau Tropical & Combi -->
+
+        <div class="combi conteneur">
+            <img src="img/entete-combi.jpg" alt="Combi Bleu, La Kaz du 974, Foodtruck, Toulouse">
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <article id="recettes">
+            <div class="conteneur">
+                <h2>Nos Emplacements . . .</h2>
+            </div>
+        </article>
+
+
+        <section id="apropos">
+            <div class="fond2">
+                <div class="conteneur">
+                    <div class="leconcept flex">
+
+                        <div class="faitmaison">
+                            <h2>LUNDI</h2>
+                            <h3>COLOMIERS</h3>
+                            <p> Dassault Systèmes
+                                37 Chemin des Ramassiers / Colomiers
+                                Horaires : 11h45 – 14h
+                            </p>
+                        </div>
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.29371373752!2d1.3531625153520195!3d43.60042576386002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aeb06512b38619%3A0x44ce094091614d8d!2sDASSAULT+DATA+SERVICES!5e0!3m2!1sfr!2sfr!4v1551359526160"
+                            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+    <footer id="pieddepage">
+
+        <div class="social">
+            <ul class="flex">
+                <li><a href="#" title="lien page Facebook" target="_blank"><img class="facebook" src="img/facebook.png"
+                            alt="logo Facebook"></a></li>
+                <li><a href="#" title="lien page Twitter" target="_blank"><img class="twitter" src="img/twitter.png"
+                            alt="logo Twitter"></a></li>
+                <li><a href="#" title="lien page Instagram" target="_blank"><img class="instagram"
+                            src="img/instagram.png" alt="logo intagram"></a></li>
+            </ul>
+
+            <small>Copyright © 2019 Mathilde PERREU</small>
+
+        </div>
+
+        <a href="#top" title="haut de page" class="fleche js-scrollTo"> <i class="fa-lg fas fa-chevron-up"></i></a>
+
+    </footer>
+
+
+
+
+    <!-- DEBUT JAVASCRIPT -->
+
+    <!--   Inclusion bibliothèque jQuery -->
+    <script src="js/jquery-1.12.4.min.js"> </script>
+
+
+    <!-- Bibliotheque jQuery UI -->
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
+    <!--       Inclusion du script personnel -->
+    <script src="js/blog_script.js"> </script>
+
+    <!-- Liez le javascript externe permettant à Fancybox de fonctionner -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js">
+    </script>
+
+    <!-- Inclusion du script OwlCarousel -->
+    <script src="js/owl.carousel.min.js"> </script>
+
+
+    <!-- Options fancybox -->
+    <script type="text/javascript">
+        $(function () {
+            $('[data-fancybox]').fancybox({
+                loop: true
+            });
+
+            $('.owl-carousel').owlCarousel({
+                slideBy: 1, // defilement 1 par 1
+                autoplay: true, // defilement automatique
+                autoplayTimeout: 3000, // au bout de 10s
+                autoplayHoverPause: true, // stoppe défilement au survol
+                loop: true, // boucle
+                navText: ["<i class='fas fa-angle-left'></i>",
+                "<i class='fas fa-angle-right'></i>"], // apparence des fleches
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: true,
+                        margin: 0,
+                        dots: true
+                    },
+                    500: {
+                        items: 3,
+                        margin: 10,
+                        nav: true,
+                        dots: true
+                    },
+                    900: {
+                        items: 4,
+                        dots: true,
+                        nav: true,
+                        margin: 20
+                    }
+                }
+            });
+
+
+
+        });
+    </script>
+
+    <!--   acordion -->
+    <script type="text/javascript">
+        $(function () {
+            $(".accordion").accordion({
+                collapsible: true, // se ferme au clic sur l'onglet
+                active: false, // tous les onglets fermés par défaut
+                animate: {
+                    easing: "easeOutBounce",
+                    duration: 2000
+                }, // animation à l'ouverture/fermeture
+                heightStyle: "content" // les div s'adaptent au contenu
+            });
+        });
+    </script>
+
+</body>
+
+</html>

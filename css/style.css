@@ -1,0 +1,866 @@
+/***************************************************
+GLOBAL
+***************************************************/
+
+/* POLICE */
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('../fonts/opensans-bold-webfont.woff2') format('woff2'),
+        url('../fonts/opensans-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('../fonts/opensans-light-webfont.woff2') format('woff2'),
+        url('../fonts/opensans-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
+        url('../fonts/opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*Si je mets des padding mes conteneurs*/
+* {
+    box-sizing: border-box;
+}
+
+
+/*Pour contrer problème de mise en page dû à l'utilisation d'éléments flottants*/
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+img,
+iframe,
+video {
+    max-width: 100%;
+    /*vertical-align : middle = éviter d'avoir une petite marge sous les images par défaut*/
+    vertical-align: middle;
+}
+
+
+/***************************************************
+STRUCTURE
+***************************************************/
+
+body {
+    line-height: 150%;
+}
+
+/* ul dans une navigation : enlever les petits points, les padding et margin car les ul mettent par défaut des padding et margin*/
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*le flex se met toujours à l'élément parent*/
+.flex {
+    /*Positionner les éléments enfants les uns à côté des autres*/
+    display: flex;
+    /*  les enfants se répartissent équitablement sur toute la largeur */
+    justify-content: space-between;
+    /*    quand il n'y a plus la place les blocs passeront les uns sous les autres */
+    flex-wrap: wrap;
+    /*   par défaut mes boites se mettent les unes à côté des autres par défaut chaque élément s'agrandisse les uns indépendant des autres */
+    align-items: flex-start;
+}
+
+a {
+    /*  Enlever le surlignage des liens */
+    text-decoration: none;
+}
+
+
+.conteneur {
+    /* width : déterminer sur Photoshop Largeur de la Maquette*/
+    width: 1200px;
+    /*  margin 0 auto : pour centrer sur l'axe horizontal */
+    margin: 0 auto;
+    /*    border: 1px solid red;*/
+}
+
+li {
+    /* enlever les points aux li*/
+    list-style: none;
+}
+
+/* Effet au survol*/
+a:hover {
+    opacity: 0.7
+}
+
+/***************************************************
+ENTETE
+***************************************************/
+
+#entete {
+    /*    border: 1px solid red;*/
+}
+
+.bandeauentete {
+    background-color: #5db84c;
+    min-height: 60px;
+    /*    border: 1px solid blue;*/
+}
+
+.menu1 {
+    min-height: 60px;
+}
+
+.menusite {
+    /*    border: 1px solid black;*/
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.menusite .droite {
+    padding-right: 200px;
+}
+
+.menusite ul li a {
+    color: white;
+    font-family: 'open_sansregular';
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0px 20px 0px 20px;
+    text-transform: uppercase;
+}
+
+.boutons {
+    width: 350px; 
+/*    border: 1px solid black; */
+}
+
+.boutons .bouton1 {
+    border: 2px solid white;
+font-family: 'open_sansregular';
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 13px 6px 13px;
+}
+
+.boutons .bouton2 {
+    border: 2px solid white;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 13px 6px 13px;
+font-family: 'open_sansregular';
+    text-transform: none;
+    margin-left: 10px;
+    margin-right: 10px; 
+}
+
+.combi {
+    padding-bottom: 30px;
+}
+
+
+/* Menu Navigation Mobile */
+
+#menu-mobile {
+    display: none;
+}
+
+
+#menu-mobile .btn {
+    cursor: pointer;
+    display: block;
+    color: white;
+    font-size: 35px;
+    padding-bottom: 20px;
+}
+
+#menu-mobile ul {
+    padding-top: 0.5rem;
+}
+
+#menu-mobile li {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+#menu-mobile a {
+    padding: 1rem 0;
+    display: block;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*Attacher le menu */
+
+.fixe {
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(250, 250, 250, 0.99);
+    box-shadow: 0 2px 11px -2px rgba(0, 0, 0, 0.7);
+    min-height: 60px; 
+}
+
+.fixe ul li a {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem; 
+        color:  #5db84c;
+}
+
+/***************************************************
+MAIN
+***************************************************/
+
+/*Bandeau Titre Principal*/
+
+#titreprincipal {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: white;
+}
+
+#titreprincipal h1 {
+    color: #3dc8e2;
+    font-family: 'open_sansregular';
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#titreprincipal p {
+    color: black;
+    font-family: 'open_sansregular';
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/*<!--Partie A Propos-->*/
+
+.fond2 {
+    background-color: rgba(169, 169, 169, 0.29);
+    /*    background-color: rgba(244, 237, 79, 0.13);*/
+    min-height: 1000px;
+}
+
+.leconcept {
+    /*    border: 1px solid blue;*/
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.faitmaison {
+    /*    border: 1px solid green;*/
+    background-color: white;
+    width: 500px;
+    /*    min-height: 300px;*/
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 25px 25px 25px 25px;
+}
+
+.faitmaison h2 {
+    font-family: 'open_sansregular';
+    font-size: 35px;
+    font-weight: 700;
+   color: #f4c41e;
+}
+
+.faitmaison h3 {
+    font-family: 'open_sansregular';
+    font-size: 25px;
+    font-weight: 400;
+    color: black;
+}
+
+.faitmaison h4 {
+    font-family: 'open_sansregular';
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.faitmaison p {
+    color: black;
+    font-family: 'open_sansregular';
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: justify;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+/*
+.image h3, .image p {
+    
+    float : left; 
+    width : 740px; 
+    padding-left: 24px; 
+}
+*/
+
+/*<!--Partie Saveurs Authentiques-->*/
+
+.saveur {
+    /*    border: 1px solid blue;*/
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.authentique {
+    /*    border: 1px solid green;*/
+    background-color: white;
+    width: 630px;
+    /*    min-height: 300px;*/
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 35px 35px 35px 35px;
+
+}
+
+.authentique h2 {
+    font-family: 'open_sansregular';
+    font-size: 35px;
+    
+       font-weight: 700;
+   color: #f4c41e;
+}
+
+.authentique h3 {
+    font-family: 'open_sansregular';
+    font-size: 25px;
+    font-weight: 400;
+    color: black;
+}
+
+.authentique p {
+    color: black;
+    font-family: 'open_sansregular';
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: justify;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+
+
+/* Bandeau Recettes */
+
+#recettes {
+/*    text-align: center;*/
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: rgba(252, 131, 8, 0.9);
+    margin-top: 50px; 
+}
+
+
+#recettes h2 {
+    color: #fff;
+    font-family: 'open_sansregular';
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+/*    border: 1px solid black; */
+}
+
+
+/* BANDEAU PETITE FRINGALE */
+
+#entrees {
+/*    text-align: center;*/
+    margin-top: 60px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 60px; 
+    background-color: rgba(169, 169, 169, 0.29);
+    min-height: 60px; 
+    
+}
+
+
+#entrees h2 {
+    color: #3b3737;
+    font-family: 'open_sansregular';
+    font-size: 30px;
+    font-weight: 700;
+/*    border: 1px solid black; */
+}
+
+
+
+
+
+
+/* LA CARTE ALSA CREATION */
+
+/*Les Entrées*/
+
+.alsa * {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.alsa {
+    padding-top: 70px; 
+}
+
+.alsa ul {
+    /*taille de la police texte*/
+    font: .80em 'open_sansregular';
+    overflow: auto;
+    width: 600px;
+    padding: 0 0 30px 30px;
+    margin: 0px auto;
+    background: rgba(238, 238, 238, 0.63);
+    /*    background:rgba(169, 169, 169, 0.12);*/
+    list-style: none;
+    box-shadow: 5px 2px 5px rgb(252, 131, 8);
+}
+
+.alsa li {
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    float: left;
+    margin: 30px 30px 0 0;
+    transition: all 1s ease;
+    /*    border-radius : 50% pour arrondir mes images  (comme images carrées à la base) */
+    border-radius: 100%;
+    /*    cursor: pointer : une main apparaît comme curseur*/
+    cursor: pointer;
+}
+
+.alsa li:hover {
+    box-shadow: 0 0 5px 3px rgb(252, 131, 8);
+}
+
+.alsa li:hover p {
+    margin-top: -70px;
+}
+
+
+.alsa p {
+    height: 30px;
+    padding: 5px;
+    opacity: .8;
+    color: #fff;
+    background: rgb(252, 131, 8);
+    /*    background: #000;*/
+    -webkit-transition: margin-top .2s ease-out;
+    -moz-transition: margin-top .2s ease-out;
+    transition: margin-top .2s ease-out;
+    text-align: center;
+}
+
+.alsa strong {
+    display: block;
+    /*
+    padding-top: auto;
+    padding-bottom: auto; 
+*/
+}
+
+
+
+/* BANDEAU PLATS */
+
+#plats {
+/*    text-align: center;*/
+    margin-top: 80px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 60px; 
+    background-color: rgba(169, 169, 169, 0.29);
+    min-height: 60px; 
+    
+}
+
+
+#plats h2 {
+    color: #3b3737;
+    font-family: 'open_sansregular';
+    font-size: 30px;
+    font-weight: 700;
+/*    border: 1px solid black; */
+}
+
+
+
+
+/*Owl Carousel*/
+
+.owl-carousel {
+
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+
+.owl-dots {
+    text-align: center;
+}
+
+.owl-dot {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.owl-dot span {
+    background-color: #fff;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #5db84c;
+}
+
+.active span {
+    background-color: #5db84c;
+}
+
+.owl-prev,
+.owl-next {
+    position: absolute;
+    top: 45%;
+}
+
+.owl-prev i,
+.owl-next i {
+    font-size: 40px;
+    color: rgb(163, 152, 159);
+}
+
+.owl-prev {
+    left: -30px;
+}
+
+.owl-next {
+    right: -30px;
+}
+
+
+
+/* PARTIE FORMULES */
+
+/* TITRES */
+
+#formules {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom:15px;
+    background-color: rgba(252, 131, 8, 0.9);
+    margin-top: 0px; 
+   }
+
+#formules h4 {
+    color: #fff;
+    font-family: 'open_sansregular';
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#formules h3 {
+    color: #fff;
+    font-family: 'open_sansregular';
+    font-size: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.hr {
+    width: 100px; 
+    border-top: 1px solid #fff; 
+    margin-bottom: 520px; 
+    display : inline-block; 
+    margin-top: 10px; 
+    margin-bottom: 0px; 
+}
+
+#formules h2 {
+    color: #fff;
+    font-family: 'open_sansregular';
+    font-size: 70px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+/*    border: 1px solid black; */
+}
+
+/* BLOC FORMULES */
+
+.accordion{
+   background-color: rgba(169, 169, 169, 0.29);
+    margin-top: 30px;
+    padding-top : 30px; 
+    padding-bottom: 30px; 
+    
+}
+
+.centre{
+    margin: 0px; 
+}
+
+
+.formule1 p {
+    font-family: 'open_sansregular';
+    border: 1px solid #5db84c;
+    width: 130px; 
+    height: 130px; 
+    margin: 0px; 
+    text-transform: uppercase;
+    text-align: center; 
+    padding-bottom: 40px; 
+    
+    background-color: white; 
+      
+}
+
+.coucou {
+    width: 600px; 
+    margin: 0 auto; 
+}
+
+
+
+/***************************************************
+FOOTER
+***************************************************/
+
+#pieddepage {
+    background-image: url(../img/bandeau-pied-de-page.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    border: 1px solid red;
+    min-height: 300px;
+}
+
+
+.social {
+    width: 200px;
+    min-height: 98px;
+    /*    border: 1px solid blue; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.social small {
+    color: #433d38;
+    font-family: 'open_sansregular';
+    font-size: 12px;
+}
+
+
+.social ul {
+    padding-left: 0px;
+}
+
+
+/* Icône Flèche */
+
+.fleche {
+    position: fixed; 
+    bottom: 60px; 
+    right: 60px; 
+    font-size: 20px; /* taille de la flèche */ 
+    color: white; /* couleur de la flèche */
+    background-color: black; 
+    border-radius: 100px; 
+    height: 50px;
+    width: 50px; 
+    text-align: center;
+    padding-top: 10px;
+/* utile pour masquer mon bouton quand je clique sur la flèche */
+    display: none; 
+   
+}
+
+
+/* la class ".affiche" elle est liée au script cf blog_script.js */
+.affiche {
+/* utile pour afficher mon bouton*/
+    display: block; 
+}
+
+
+
+
+
+
+
+
+/* Page Contact */
+
+/***************************************************
+formulaire
+***************************************************/
+
+.formulaire form {
+    padding-bottom: 2rem;
+}
+
+label {
+    display: block;
+}
+
+input,
+textarea,
+select {
+    border: 1px solid #e0e0e0;
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+    border-radius: 7px;
+}
+
+input[type="submit"] {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1.25rem
+}
+
+textarea {
+    min-height: 200px;
+}
+
+input:required {}
+
+input:focus,
+textarea:focus {
+    background-color: #c8c8c8;
+    color: white;
+}
+
+input:invalid {
+
+    box-shadow: none;
+
+}
+
+
+.principal {
+    padding-top: 3rem;
+}
+
+#page {
+    width: 750px;
+background-color: #5db84c;
+    font-family: 'open_sansregular'; 
+    
+}
+
+#page h1 {
+    color: white; 
+}
+
+#pleine-page {
+    width: 100%;
+}
+
+.index,
+.inter {
+    border: 1px solid #e0e0e0;
+    margin-bottom: 2.5rem;
+    background-color: #ffffff;
+}
+
+.index:last-child,
+.inter:last-child {
+    margin-bottom: 0;
+}
+
+.presentation,
+.inter {
+    padding: 3rem 2.5rem;
+
+}
+
+/** Colonne **/
+
+#colonne {
+    width: 400px;
+    min-height: 400px;
+  font-family: 'open_sansregular'; 
+}
+
+.widget {
+    border: 1px solid #e0e0e0;
+    background-color: #e44145;
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.widget h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    padding: 5px 0 13px 0;
+    position: relative;
+    margin-bottom: 20px;
+    color: white; 
+}
+
+.widget h3:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.95);
+    content: "";
+}
+
+.widget ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.widget li {
+    position: relative;
+    background-image: url(../img/baseline-arrow_right-24px.svg);
+    background-position: -10px center;
+    background-repeat: no-repeat;
+    padding-left: 13px;
+}
+
+.widget p {
+    padding-bottom: 1rem;
+}
+
+.widget a {
+    color: black;
+    line-height: 150%;
+}
+
